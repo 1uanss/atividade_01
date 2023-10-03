@@ -23,9 +23,9 @@
 
 
 # Verifique se este arquivo está sendo executado diretamente (não importado como um módulo)
-if name == "main":
+#if name == "main":
     # Inicie o servidor Flask na porta 5000 e ative o modo de depuração
-    app.run(debug=True)
+#    app.run(debug=True)
 
 #Atividade semelhante a que foi desenvolvida na sala de aula 
 import flet
