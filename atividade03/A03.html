@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Lista de Tarefas</h1>
+  <input type="text" id="tarefa" placeholder="Adicione uma tarefa">
+  <button id="adicionarTarefa">Adicionar</button>
+  <ul id="listaTarefas"></ul>
+
+  <script>
+    // Função para adicionar uma tarefa à lista
+    function adicionarTarefa() {
+      const tarefa = $("#tarefa").val();
+      if (tarefa.trim() !== '') {
+        $("#listaTarefas").append("<li>" + tarefa + "</li>");
+        $("#tarefa").val(""); // Limpa o campo de entrada de texto
+      }
+    }
+
+    // Vincula o evento de clique ao botão "Adicionar"
+    $("#adicionarTarefa").on("click", adicionarTarefa);
+
+    // Vincula o evento de pressionar Enter no campo de entrada de texto para adicionar tarefa
+    $("#tarefa").on("keypress", function (e) {
+      if (e.key === "Enter") {
+        adicionarTarefa();
+      }
+    });
+  </script>
+</body>
+</html>
